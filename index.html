@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Imperium</title>
+
+</head>
+<body>
+    <header>
+        <h1 id="title">Vending Imperium</h1>
+        <button class="tab" data-tab="order-now">Order Now</button>
+        <button class="tab" data-tab="contact-us">Contact Us</button>
+        <button class="tab" data-tab="about-us">About Us</button>
+        <button class="tab" data-tab="customer-service">Customer Service</button>
+    </header>
+    
+    
+    <section id="order-now">
+        <h2>Order Now</h2>
+        <div class="button-container">
+            <button type="button" class="tab dropdown-toggle" data-tab="Machine-type">Place an order</button>
+            <button type="button" id="micro-markets-button" class="tab dropdown-toggle" data-tab="Micro-markets">Micro Markets</button>
+            <button type="button" id="Downloadble-Survey" class="tab dropdown-toggle" data-tab="Downloadble-Survey">Downloadble Survey</button>
+        </div>
+    </section>
+
+    <section id="Downloadble-Survey">
+        <h2>Feedback Survey</h2>
+        <p>We value your feedback! Please download and distribute our survey to gather feedback from a group of people. The submitted forms will help us gather information about a location. Click the link below to download the survey:</p>
+        <a href="://docs.google.com/forms/d/e/1FAIpQLSelSXt5lhCFaX-sTLHPH8t5O8VnvxdICiQGNLcvI3KX9EwZkw/viewform?embedded=true" width="640" height="1789" frameborder="0" marginheight="0" marginwidth="0">Download Survey</a>
+    </section>
+    
+    
+    <section id="micro-markets-content">
+        <h2>Micro Markets</h2>
+        <!-- Add your micro markets content here -->
+        <p>
+            At Vending Imperium, we offer state-of-the-art micromarkets – self-service retail spaces that transform traditional vending. Micromarkets provide a wide selection of fresh foods, beverages, hygiene products and snacks in an open, easy-to-navigate layout, offering a more pleasant shopping experience.
+        </p>
+        <!-- Adding images -->
+        <div class="images-container">
+            <img src="https://d266cn3wcwor51.cloudfront.net/hu/landing_page/micromarkets/96440-micromarkets-grabandgo.jpg" alt="Micro Market 1" class="micro-market-image">
+            <img src="https://www.globalvendingservice.com/images/micromarkets/florida-micro-markets-header-image.jpg" alt="Micro Market 2" class="micro-market-image">
+        </div>
+        <h3>Why Choose Micromarkets?</h3>
+        <p>
+            Micromarkets by Vending Imperium bring numerous advantages:
+        </p>
+        <ul>
+            <li><strong>Convenience:</strong> Available 24/7, micromarkets provide a broad array of products without the need for on-site staff.</li>
+            <li><strong>Variety:</strong> Our micromarkets feature a diverse selection of items, including fresh, premade, and healthy options, far surpassing the capabilities of traditional vending machines.</li>
+            <li><strong>Modern Shopping Experience:</strong> The self-checkout technology ensures a seamless and contemporary shopping experience.</li>
+        </ul>
+        <h3>Ideal Settings for Micromarkets</h3>
+        <p>
+            Micromarkets are ideal for various settings, including:
+        </p>
+        <ul>
+            <li>Corporate offices and business complexes</li>
+            <li>Hospitals and healthcare facilities</li>
+            <li>Apartment complexes and residential buildings</li>
+            <li>Gyms and fitness centers</li>
+            <li>Universities and schools</li>
+        </ul>
+        <button id="orderMicroMarketBtn">Order Micro Market</button>
+    
+        <div id="orderMicroMarketForm" style="display: none;">
+            <h3>Order Micro Market</h3>
+            <form id="microMarketOrderForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="address">Address of Market Location:</label>
+                <input type="text" id="address2" name="address2" required><br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
+
+    <section id="contact-us"> 
+        <h2>Contact Us</h2> 
+        <div class="contact-info">
+            <p><strong>Contact: Alex Saldanha</strong></p>
+            <p>Phone Number: <a href="tel:+12672264412">267-226-4412</a></p> 
+            <p>Email Address: <a href="mailto:vendingimperiumllc@gmail.com">vendingimperiumllc@gmail.com</a></p>
+        </div>
+    </section>
+    
+    <section id="about-us">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>Welcome to Vending Imperium LLC, where vending solutions meet excellence. Founded by Alex Saldanha, a finance major at Gwynedd Mercy University and a proud graduate of Roman Catholic High School, our company embodies a commitment to simplicity, efficiency, and integrity.</strong></p>
+                <p><strong>At Vending Imperium, we strive to redefine the vending experience by offering unparalleled service, modernized order placement, and transparent business practice. With a focus on attentiveness and professionalism, we ensure that every interaction with our company is seamless and satisfying.</strong></p>
+                <p><strong>Join us on our mission to revolutionize the vending industry and discover the difference with Vending Imperium LLC.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="customer-service">
+        <div class="customer-service">
+            <h1>Sometimes things go wrong. We can help.</h1>
+            <div class="tabs">
+                <button class="tab-btn" onclick="openTab('report-machine')">Report a Machine</button>
+                <button class="tab-btn" onclick="openTab('improve')">How Can We Improve?</button>
+                <button class="tab-btn" onclick="openTab('report-snack')">Report Snack Quality</button>
+            </div>
+            <div id="report-machine" class="tab-content">
+                <h2>Report a Machine</h2>
+                <form id="reportMachineForm">
+                    <label for="machinenumber">Machine Number:</label>
+                    <input type="text" id="machinenumber" name="machinenumber" required><br>
+                    <label for="issueDescription">Issue Description:</label>
+                    <textarea id="issueDescription" name="issueDescription" required></textarea><br>
+                    <button type="submit">Submit Report</button>
+                </form>
+            </div>
+            <div id="improve" class="tab-content">
+                <h2>How Can We Improve?</h2>
+                <form id="improveForm">
+                    <label for="Feedback">Your Feedback:</label>
+                    <textarea id="Feedback" name="Feedback" required></textarea><br>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+            <div id="report-snack" class="tab-content">
+                <h2>Report Snack Quality</h2>
+                <form id="reportSnackForm">
+                    <label for="machinenumber">Machine Number:</label>
+                    <input type="text" id="machinenumber" name="machinenumber" 
+                    <label for="reporteditem">Reported item:</label>
+                    <input type="text" id="reporteditem" name="reporteditem" required><br>
+                    <label for="snackIssue">Issue Description:</label>
+                    <textarea id="snackIssue" name="snackIssue" required></textarea><br>
+                    <label for="reporterEmailSnack">Your Email:</label>
+                    <input type="email" id="reporterEmailSnack" name="reporterEmailSnack" required><br>
+                    <button type="submit">Submit Report</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <h1>How We Stand Out</h1>
+<div class="feature-cards">
+    <div class="card">
+        <h3>Online Ordering</h3>
+        <p>Our online ordering system is designed for simplicity and ease, offering a wide variety of options to cater to all preferences. Enjoy the convenience of seamless transactions from the comfort of your home or office.</p>
+    </div>
+    <div class="card">
+        <h3>Micro Markets</h3>
+        <p>Experience the future of vending with our micro markets. We provide a self-service convenience store setup, stocked with a diverse selection of high-quality products to meet your everyday needs.</p>
+    </div>
+    <div class="card">
+        <h3>Unparalleled Service</h3>
+        <p>At Vending Imperium, customer satisfaction is our top priority. Our dedicated team ensures that each machine is always stocked and functioning optimally, providing you with unmatched service and reliability.</p>
+    </div>
+</div>
+
+</head>
+<body>
+   <!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>If ordering machines specify quantity</h2>
+        <ul id="machineList">
+            <li>
+                <strong>Snack Machine:</strong> 
+                <input type="number" id="snackQuantity" value="0" min="0">
+            </li>
+            <li>
+                <strong>Drink Machine:</strong> 
+                <input type="number" id="drinkQuantity" value="0" min="0">
+            </li>
+        </ul>
+        <h3>Select Your Snacks</h3>
+        <div id="snackList">
+            <!-- Snack Items -->
+            <label class="product-item">
+                <strong>Lays Original</strong> 
+                <input type="checkbox" id="LaysOriginal" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>150 calories, 10g fat, 15g carbs, 2g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains potatoes, oil, salt.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Cheez-It Originals</strong> 
+                <input type="checkbox" id="CheezItOriginal" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>210 calories, 10g fat, 24g carbs, 4g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains wheat, milk.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Cheetos Originals</strong> 
+                <input type="checkbox" id="CheetosOriginal" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 10g fat, 13g carbs, 2g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk, corn.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Doritos Originals</strong> 
+                <input type="checkbox" id="DoritosOriginals" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>150 calories, 8g fat, 18g carbs, 2g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains corn, wheat.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>White Cheddar Popcorn</strong> 
+                <input type="checkbox" id="WhiteCheddarPopcorn" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>140 calories, 9g fat, 14g carbs, 2g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Pringles Originals</strong> 
+                <input type="checkbox" id="PringlesOriginals" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>150 calories, 9g fat, 15g carbs, 1g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains potatoes, oil, salt.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Quest Protein Chips</strong> 
+                <input type="checkbox" id="QuestProteinChips" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>130 calories, 5g fat, 5g carbs, 18g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk and soy.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                    <div class="protein-check"><span style="color: blue;">✔</span> <em>Protein Pick</em></div> <!-- Blue check mark for protein pick -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Bare Apple Chips</strong> 
+                <input type="checkbox" id="BareAppleChips" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>120 calories, 0g fat, 26g carbs, 1g protein</p>
+                    <strong>Allergy Info:</strong>
+                    <p>Contains apples.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Ruffles</strong> 
+                <input type="checkbox" id="Ruffles" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 10g fat, 15g carbs, 2g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains soy.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Takis Fuego</strong> 
+                <input type="checkbox" id="TakisFuego" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>140 calories, 8g fat, 16g carbs, 2g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains corn, chili pepper.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Snickers</strong> 
+                <input type="checkbox" id="Snickers" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>250 calories, 12g fat, 33g carbs, 4g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains peanuts, milk, egg.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>M&M's Peanut</strong> 
+                <input type="checkbox" id="M&MsPeanut" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>240 calories, 13g fat, 25g carbs, 5g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains peanuts, milk, soy.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Twix</strong> 
+                <input type="checkbox" id="Twix" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>250 calories, 12g fat, 34g carbs, 2g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains wheat, milk, soy.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>KitKat</strong> 
+                <input type="checkbox" id="KitKat" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>210 calories, 11g fat, 27g carbs, 3g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains wheat, milk, soy.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Kind Bar</strong> 
+                <input type="checkbox" id="KindBar" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>200 calories, 12g fat, 17g carbs, 7g protein</p>
+                    <strong>Allergy Info:</strong>
+                    <p>Contains almonds, peanuts, and soy.</p>
+                    <hr>
+                  <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                  <div class="protein-check"><span style="color: blue;">✔</span> <em>Protein Pick</em></div> <!-- Blue check mark for protein pick -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Power Crunch Protein Energy Bar</strong> 
+                <input type="checkbox" id="PowerCrunchBar" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>205 calories, 12g fat, 10g carbs, 13g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk, soy, wheat.</p>
+                    <hr>
+                    <div class="protein-check"><span style="color: blue;">✔</span> <em>Protein Pick</em></div> <!-- Blue check mark for protein pick -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Reese's Peanut Butter Cups</strong> 
+                <input type="checkbox" id="Reeses" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>210 calories, 13g fat, 24g carbs, 5g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains peanuts, milk, soy.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Skittles</strong> 
+                <input type="checkbox" id="Skittles" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>230 calories, 2.5g fat, 51g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>May contain traces of nuts.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Hershey's Milk Chocolate</strong> 
+                <input type="checkbox" id="Hersheys" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>210 calories, 13g fat, 24g carbs, 3g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk, soy.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Sour Patch Kids</strong> 
+                <input type="checkbox" id="SourPatchKids" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>150 calories, 0g fat, 36g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains sugar, corn syrup.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Starburst</strong> 
+                <input type="checkbox" id="Starburst" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 3.5g fat, 33g carbs, 0g protein</p>
+                    <hr class="line-divider">
+                    <strong>Allergy Info:</strong>
+                    <p>Contains sugar, corn syrup.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Chewing Gum</strong> 
+                <input type="checkbox" id="ChewingGum" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>5 calories, 0g fat, 2g carbs, 0g protein</p>
+                    <hr class="line-divider">
+                    <strong>Allergy Info:</strong>
+                    <p>Contains sugar, gum base.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Haribo Gummies</strong> 
+                <input type="checkbox" id="HariboGummies" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>130 calories, 0g fat, 30g carbs, 2g protein</p>
+                    <hr class="line-divider">
+                    <strong>Allergy Info:</strong>
+                    <p>Contains gelatin.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Trolli Gummies</strong> 
+                <input type="checkbox" id="TrolliGummies" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>120 calories, 0g fat, 28g carbs, 2g protein</p>
+                    <hr class="line-divider">
+                    <strong>Allergy Info:</strong>
+                    <p>Contains gelatin.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Pop Tarts</strong> 
+                <input type="checkbox" id="PopTarts" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>200 calories, 5g fat, 38g carbs, 2g protein</p>
+                    <hr class="line-divider">
+                    <strong>Allergy Info:</strong>
+                    <p>Contains wheat, soy, and milk.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Ritz Crackers</strong> 
+                <input type="checkbox" id="RitzCrackers" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 8g fat, 20g carbs, 2g protein</p>
+                    <hr class="line-divider">
+                    <strong>Allergy Info:</strong>
+                    <p>Contains wheat and soy.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>GoGo Squeez Applesauce</strong> 
+                <input type="checkbox" id="GoGoSqueezApplesauce" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>60 calories, 0g fat, 15g carbs, 0g protein</p>
+                    <strong>Allergy Info:</strong>
+                    <p>Contains apples.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Clif Bars</strong> 
+                <input type="checkbox" id="ClifBars" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>250 calories, 6g fat, 41g carbs, 9g protein</p>
+                    <hr class="line-divider">
+                    <strong>Allergy Info:</strong>
+                    <p>Contains soy, peanuts, and other tree nuts.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                    <div class="protein-check"><span style="color: blue;">✔</span> <em>Protein Pick</em></div> <!-- Blue check mark for protein pick -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Almonds</strong> 
+                <input type="checkbox" id="Almonds" class="snackItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 14g fat, 6g carbs, 6g protein</p>
+                    <hr class="line-divider">
+                    <strong>Allergy Info:</strong>
+                    <p>Contains tree nuts.</p>
+                  <hr>
+                  <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                  <div class="protein-check"><span style="color: blue;">✔</span> <em>Protein Pick</em></div> <!-- Blue check mark for protein pick -->
+                </span>
+            </label>            
+            <!-- Other Snack Request -->
+            <label><strong>Other Snack:</strong> <input type="text" id="otherSnack" placeholder="Specify other snack"></label>
+        </div>
+        <h3>Select Your Drinks</h3>
+        <div id="drinkList">
+            <!-- Drink Items -->
+            <label class="product-item">
+                <strong>Coca-Cola</strong>
+                <input type="checkbox" id="CocaCola" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>140 calories, 0g fat, 39g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Pepsi</strong>
+                <input type="checkbox" id="Pepsi" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>150 calories, 0g fat, 41g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Sprite</strong>
+                <input type="checkbox" id="Sprite" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>140 calories, 0g fat, 38g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Mountain Dew</strong>
+                <input type="checkbox" id="MountainDew" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>170 calories, 0g fat, 46g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Dr. Pepper</strong>
+                <input type="checkbox" id="DrPepper" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>150 calories, 0g fat, 41g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Fanta Orange</strong>
+                <input type="checkbox" id="FantaOrange" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 0g fat, 44g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Ginger Ale</strong>
+                <input type="checkbox" id="GingerAle" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>140 calories, 0g fat, 36g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Root Beer</strong>
+                <input type="checkbox" id="RootBeer" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 0g fat, 42g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Gatorade</strong>
+                <input type="checkbox" id="Gatorade" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>80 calories, 0g fat, 21g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains electrolytes.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Body Armor</strong>
+                <input type="checkbox" id="BodyArmor" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>70 calories, 0g fat, 18g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>None</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            
+            <label class="product-item">
+                <strong>Red Bull</strong>
+                <input type="checkbox" id="RedBull" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>110 calories, 0g fat, 28g carbs, 1g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Monster Energy</strong>
+                <input type="checkbox" id="MonsterEnergy" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 0g fat, 54g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Rockstar Energy</strong>
+                <input type="checkbox" id="RockstarEnergy" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>140 calories, 0g fat, 31g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Celsius</strong>
+                <input type="checkbox" id="Celsius" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>10 calories, 0g fat, 2g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Starbucks Frappuccino</strong>
+                <input type="checkbox" id="StarbucksFrappuccino" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>200 calories, 3.5g fat, 36g carbs, 3g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Lipton Iced Tea</strong>
+                <input type="checkbox" id="LiptonIcedTea" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>70 calories, 0g fat, 18g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Snapple Iced Tea</strong>
+                <input type="checkbox" id="SnapplePeachTea" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>150 calories, 0g fat, 38g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains caffeine.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Arizona Iced Tea</strong>
+                <input type="checkbox" id="ArizonaIcedTea" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>70 calories, 0g fat, 18g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>None</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Water</strong>
+                <input type="checkbox" id="Water" class="drinkItem">
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Pure Leaf Ice Tea Sweetened</strong>
+                <input type="checkbox" id="PureLeafIceTeaSweetened" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>150 calories, 0g fat, 38g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains soy.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Pure Leaf Tea Unsweetened</strong>
+                <input type="checkbox" id="PureLeafIceTeaUnsweetened" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>10 calories, 0g fat, 3g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>None</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Coconut Water</strong>
+                <input type="checkbox" id="CoconutWater" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>45 calories, 0g fat, 11g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>None</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Tropicana Orange Juice</strong>
+                <input type="checkbox" id="TropicanaOrangeJuice" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>110 calories, 0g fat, 26g carbs, 2g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>None</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Apple Juice</strong>
+                <input type="checkbox" id="AppleJuice" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>110 calories, 0g fat, 28g carbs, 0g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>None</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Yoohoo</strong>
+                <input type="checkbox" id="Yoohoo" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>170 calories, 2.5g fat, 37g carbs, 4g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk and soy.</p>
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Fair Life Protein Drinks</strong>
+                <input type="checkbox" id="FairLifeProteinDrinks" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>120 calories, 2g fat, 8g carbs, 20g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk and soy.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                    <div class="protein-check"><span style="color: blue;">✔</span> <em>Protein Pick</em></div> <!-- Blue check mark for protein pick -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Premier Protein</strong>
+                <input type="checkbox" id="PremierProtein" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>160 calories, 3g fat, 4g carbs, 30g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk and soy.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                    <div class="protein-check"><span style="color: blue;">✔</span> <em>Protein Pick</em></div> <!-- Blue check mark for protein pick -->
+                </span>
+            </label>
+            <label class="product-item">
+                <strong>Muscle Milk</strong> 
+                <input type="checkbox" id="MuscleMilk" class="drinkItem">
+                <span class="product-details">
+                    <strong>Nutritional Info:</strong>
+                    <p>200 calories, 9g fat, 9g carbs, 32g protein</p>
+                    <hr> <!-- Line separator -->
+                    <strong>Allergy Info:</strong>
+                    <p>Contains milk and soy.</p>
+                    <hr>
+                    <div class="healthy-check"><span style="color: green;">✔</span> <em>Healthy</em></div> <!-- Green check mark for healthy -->
+                    <div class="protein-check"><span style="color: blue;">✔</span> <em>Protein Pick</em></div> <!-- Blue check mark for protein pick -->
+                </span>
+            </label>
+            <!-- Other Drink Request -->
+            <label><strong>Other Drink:</strong> <input type="text" id="otherDrink" placeholder="Specify other drink"></label>
+        </div>
+        <!-- Contact Information -->
+        <h3>Contact Information</h3>
+        <div>
+            <label><strong>Customer Name<span style="color: red;">*</span>:</strong> <input type="text" id="customerName" placeholder="Enter your name" required></label><br>
+            <label><strong>Address<span style="color: red;">*</span>:</strong> <input type="text" id="address" placeholder="Enter your address" required></label><br>
+            <label><strong>Phone Number<span style="color: red;">*</span>:</strong> 
+                <input type="text" id="areaCode" placeholder="Area Code" maxlength="3" required> -
+                <input type="text" id="phonePrefix" placeholder="Prefix" maxlength="3" required> -
+                <input type="text" id="phoneSuffix" placeholder="Suffix" maxlength="4" required>
+            </label>
+        </div>
+        <button id="confirmBtn">Place Order</button>
+    </div>
+</div>
+
